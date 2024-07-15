@@ -1,5 +1,9 @@
 package com.aluracursos.challengeone_literalura;
 
+import com.aluracursos.challengeone_literalura.models.DatosRespuesta;
+import com.aluracursos.challengeone_literalura.principal.Principal;
+import com.aluracursos.challengeone_literalura.service.ConversorDatos;
+import com.aluracursos.challengeone_literalura.service.UsarApi;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,8 +17,7 @@ public class ChallengeoneLiteraluraApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		var usarApi = new UsarApi();
-		String json = usarApi.obtenerDatos("https://gutendex.com/books/");
-		System.out.println(json);
+		Principal principal = new Principal();
+		principal.imprimirMenu();
 	}
 }
